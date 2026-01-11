@@ -11,10 +11,14 @@
   "agent": {
     "default_model": {
       "provider": "google",
-      "model": "gemini-2.5-flash"
+      "model": "gemini-3-pro-preview"
     },
-    "default_profile": "ask",
     "model_parameters": []
+  },
+  "agent_servers": {
+    "claude": {
+      "default_mode": "acceptEdits"
+    }
   },
 
   // Features

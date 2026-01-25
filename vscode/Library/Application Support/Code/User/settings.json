@@ -50,5 +50,21 @@
     "git.autofetch": true,
     "redhat.telemetry.enabled": false,
     "git.enableSmartCommit": true,
-    "chat.disableAIFeatures": true
+    "chat.disableAIFeatures": true,
+
+    // Claude Code
+    "claudeCode.initialPermissionMode": "acceptEdits",
+    "claudeCode.preferredLocation": "panel",
+
+    // Language Specific
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [
+            80
+        ],
+        "editor.selectionHighlight": false,
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": "off"
+    }
 }

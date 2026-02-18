@@ -51,10 +51,11 @@
     "redhat.telemetry.enabled": false,
     "git.enableSmartCommit": true,
     "chat.disableAIFeatures": true,
+    "terminal.integrated.fontSize": 14,
 
     // Claude Code
     "claudeCode.initialPermissionMode": "acceptEdits",
-    "claudeCode.preferredLocation": "panel",
+    "claudeCode.useTerminal": true,
 
     // Language Specific
     "[dart]": {
@@ -66,5 +67,5 @@
         "editor.selectionHighlight": false,
         "editor.tabCompletion": "onlySnippets",
         "editor.wordBasedSuggestions": "off"
-    }
+    },
 }

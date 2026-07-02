@@ -71,6 +71,12 @@
 !helix/.config/helix/
 !helix/.config/helix/**
 
+# Claude package
+!claude/
+!claude/.claude/
+!claude/.claude/CLAUDE.md
+!claude/.claude/settings.json
+
 # Ignore .DS_Store files everywhere
 **/.DS_Store
 .DS_Store

@@ -12,6 +12,5 @@
   "theme": "auto",
   "preferredNotifChannel": "terminal_bell",
   "agentPushNotifEnabled": true,
-  "voiceEnabled": true,
-  "model": "claude-fable-5[1m]"
+  "voiceEnabled": true
 }

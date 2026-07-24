@@ -11,14 +11,7 @@ Personal, cross-project preferences. These apply in every project unless a proje
 
 ## My skills
 
-- **Web/UI conventions** live in a personal skill, `web-conventions` (repo
-  `thrasos-dev/web-conventions`, local clone `~/repos/web-conventions`; installed via
-  `npx skills add`). To change a convention: edit `SKILL.md`, bump `metadata.version`,
-  commit + push, then `npx skills update web-conventions`. Commit author must be the GitHub
-  noreply `100732009+thrasos-dev@users.noreply.github.com` (not the iCloud email), or the
-  push is rejected.
-- `npx skills` (skills.sh) installs **GitHub sources only**. For license-gated URL skills
-  (e.g. React Bits Pro, `https://pro.reactbits.dev/api/r/starter/skills`):
-  `REACTBITS_LICENSE_KEY=<key> node ~/.agents/install-reactbits-pro-skill.mjs` — writes real
-  files to `~/.agents/skills/<name>/` and symlinks into `~/.claude/skills/`. Re-run to
-  update; won't appear in `npx skills list`.
+- **web-conventions** (personal skill) — my conventions and taste for web UI. Use it when
+  building, styling, or modifying any frontend/web interface.
+- **React Bits Pro** — license-gated, not on GitHub, so `npx skills` can't install it.
+  Install/update: `REACTBITS_LICENSE_KEY=<key> node ~/.agents/install-reactbits-pro-skill.mjs`.

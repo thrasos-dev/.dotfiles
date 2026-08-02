@@ -8,6 +8,12 @@
 !.gitignore
 !README.md
 
+# Repo tooling (not a Stow package)
+!scripts/
+!scripts/**
+!hooks/
+!hooks/**
+
 # Wallpapers package
 !wallpapers/
 !wallpapers/Pictures/

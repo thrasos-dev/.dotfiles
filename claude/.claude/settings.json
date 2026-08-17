@@ -3,9 +3,6 @@
     "commit": "",
     "pr": ""
   },
-  "permissions": {
-    "defaultMode": "auto"
-  },
   "enabledPlugins": {
     "context7@claude-plugins-official": true
   },

@@ -15,7 +15,3 @@ Personal, cross-project preferences. These apply in every project unless a proje
   building, styling, or modifying any frontend/web interface.
 - **frontend-design** — use it when designing UI: building pages, layouts, or
   reshaping an existing interface.
-
-## Responses
-
-Don't over-complicate your responses.

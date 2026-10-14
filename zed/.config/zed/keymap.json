@@ -8,7 +8,7 @@
 [
   {
     "bindings": {
-      "cmd-shift-g": ["task::Spawn", { "task_name": "LazyGit", "reveal_target": "center" }]
+      "cmd-shift-g": "git_panel::ToggleFocus"
     }
   },
   {

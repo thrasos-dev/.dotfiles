@@ -3,35 +3,22 @@
   {
     "label": "Open Typst Preview",
     "command": "open -na Safari http://127.0.0.1:23635/ && osascript -e 'tell application \"Safari\" to close (every tab of every window whose URL is not \"http://127.0.0.1:23635/\")'",
-    "use_new_terminal": true,
     "allow_concurrent_runs": false,
+    "hide": "always",
     "reveal": "never",
     "reveal_target": "dock",
-    "hide": "always",
     "shell": "system",
-    "show_summary": true,
     "show_command": true,
-    "tags": ["typst"]
-  },
-  {
-    "label": "LazyGit",
-    "command": "lazygit",
-    "shell": {
-      "program": "sh"
-    },
-    "hide": "on_success",
-    "reveal_target": "center",
-    "show_summary": false,
-    "show_command": false,
-    "allow_concurrent_runs": true,
+    "show_summary": true,
+    "tags": ["typst"],
     "use_new_terminal": true
   },
   {
-      "label": "Run Minecraft Client",
-      "command": "./gradlew runClient",
-      "use_new_terminal": true,
-      "allow_concurrent_runs": true,
-      "reveal": "no_focus",
-      "hide": "on_success"
-    }
+    "label": "Run Minecraft Client",
+    "command": "./gradlew runClient",
+    "allow_concurrent_runs": true,
+    "hide": "on_success",
+    "reveal": "no_focus",
+    "use_new_terminal": true
+  }
 ]

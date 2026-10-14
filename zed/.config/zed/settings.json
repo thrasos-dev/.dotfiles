@@ -17,26 +17,36 @@
   "agent": {
     "default_model": {
       "effort": "medium",
-      "provider": "google",
+      "enable_thinking": true,
       "model": "gemini-3.5-flash",
-      "enable_thinking": true
+      "provider": "google"
     },
-    "terminal_init_command": "claude --effort max"
+    "terminal_init_command": "claude"
   },
-  "vim_mode": true,
-  "relative_line_numbers": "enabled",
   "autosave": {
     "after_delay": {
       "milliseconds": 0
     }
   },
   "cli_default_open_behavior": "existing_window",
+  "confirm_quit": true,
+  "git_panel": {
+    "tree_view": true
+  },
+  "markdown_preview": {
+    "open_markdown_files_in_preview": true
+  },
+  "relative_line_numbers": "enabled",
+  "vim_mode": true,
 
   // Appearance
+  "cursor_animation": {
+    "enabled": true
+  },
   "theme": {
-    "mode": "system",
+    "dark": "One Dark",
     "light": "One Light",
-    "dark": "One Dark"
+    "mode": "system"
   },
 
   // Language Servers
@@ -50,8 +60,8 @@
         }
       },
       "settings": {
-        "outputPath": "$root/target/$dir/$name",
-        "formatterMode": "typstyle"
+        "formatterMode": "typstyle",
+        "outputPath": "$root/target/$dir/$name"
       }
     }
   }

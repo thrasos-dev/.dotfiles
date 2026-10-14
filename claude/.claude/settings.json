@@ -4,15 +4,23 @@
     "pr": ""
   },
   "enabledPlugins": {
-    "context7@claude-plugins-official": true
+    "context7@claude-plugins-official": true,
+    "posthog@claude-plugins-official": true,
+    "stripe@claude-plugins-official": true,
+    "swift-lsp@claude-plugins-official": true
   },
   "alwaysThinkingEnabled": true,
   "effortLevel": "xhigh",
+  "modelSettings": {
+    "claude-opus-5-5": {
+      "effortLevel": "xhigh"
+    }
+  },
   "tui": "fullscreen",
+  "autoMemoryEnabled": false,
   "skipWorkflowUsageWarning": true,
   "theme": "auto",
   "preferredNotifChannel": "terminal_bell",
   "agentPushNotifEnabled": true,
-  "voiceEnabled": true,
-  "autoMemoryEnabled": false
+  "voiceEnabled": true
 }

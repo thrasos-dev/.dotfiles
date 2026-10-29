@@ -4,9 +4,10 @@
 # The sidebar shows the same name as $tab_name, without the number when the
 # space has only one agent.
 #
-# Runs as a Stop and SessionStart hook and updates every Claude Code tab in the
-# space, so numbers catch up after tabs move or close. Tabs you named yourself
-# are left alone: only a numbered tab, or one this hook named, gets renamed.
+# Runs when a session starts, when you send a message and when Claude finishes
+# replying, and updates every Claude Code tab in the space, so numbers catch up
+# after tabs move or close. Tabs you named yourself are left alone: only a
+# numbered tab, or one this hook named, gets renamed.
 
 [ "${HERDR_ENV:-}" = "1" ] && [ -n "${HERDR_PANE_ID:-}" ] || exit 0
 command -v herdr >/dev/null 2>&1 && command -v jq >/dev/null 2>&1 || exit 0
@@ -16,10 +17,11 @@ max_length=32
 sep=$(printf '\037')
 
 # Until Claude Code has named the session, its title is just "Claude Code".
-# A resumed session sets its title a moment after it starts.
-if [ "${1:-}" = "session" ]; then
+# It names a new session a few seconds after the first message, and a resumed
+# one a moment after it starts, so "wait" gives it time.
+if [ "${1:-}" = "wait" ]; then
   i=0
-  while [ "$i" -lt 10 ]; do
+  while [ "$i" -lt 30 ]; do
     title=$(herdr pane get "$HERDR_PANE_ID" 2>/dev/null |
       jq -r '.result.pane.terminal_title_stripped // ""')
     [ -n "$title" ] && [ "$title" != "Claude Code" ] && break

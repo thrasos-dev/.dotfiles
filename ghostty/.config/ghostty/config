@@ -1,4 +1,4 @@
-theme = light:One Half Light,dark:Ghostty Default Style Dark
+theme = light:Atom One Light,dark:Atom One Dark
 font-size = 15
 macos-option-as-alt = true
 shell-integration-features = no-cursor

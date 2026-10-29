@@ -7,15 +7,27 @@ enabled = true
 status_indicators = "dots"
 
 [ui.toast]
-delivery = "terminal"
+delivery = "herdr"
 
 [theme]
 auto_switch = true
-dark_name = "catppuccin"
-light_name = "catppuccin-latte"
+dark_name = "one-dark"
+light_name = "one-light"
 
+# Claude Code tabs show the name ~/.claude/hooks/herdr-tab-title.sh gives them
+# ($tab_name), which leaves out the number when it's the space's only agent.
 [ui.sidebar.agents.rows_by_agent]
 claude = [
-  ["state_icon", "workspace", "tab"],
-  ["terminal_title_stripped"],
+  ["state_icon", "machine", "workspace", "$tab_name"],
+  ["agent"],
 ]
+
+# prefix+c opens a tab with Claude Code in it; prefix+shift+c a plain one.
+[keys]
+new_tab = "prefix+shift+c"
+
+[[keys.command]]
+key = "prefix+c"
+type = "shell"
+command = '"$HOME/.config/herdr/new-claude-tab.sh"'
+description = "new tab with Claude Code"

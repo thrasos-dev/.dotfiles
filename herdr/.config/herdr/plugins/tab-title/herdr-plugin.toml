@@ -1,0 +1,41 @@
+# Names Claude Code tabs after their sessions; see tab-title.sh. Registered
+# once per machine with `herdr plugin link ~/.config/herdr/plugins/tab-title`.
+id = "local.tab-title"
+name = "Tab titles"
+version = "0.1.0"
+min_herdr_version = "0.9.5"
+description = "Name Claude Code tabs after their sessions"
+platforms = ["linux", "macos"]
+
+# After a restart, when herdr has restored the tabs.
+[[startup]]
+command = ["sh", "tab-title.sh"]
+
+# Numbers shift when tabs open, close or move.
+[[events]]
+on = "tab.created"
+command = ["sh", "tab-title.sh"]
+
+[[events]]
+on = "tab.closed"
+command = ["sh", "tab-title.sh"]
+
+[[events]]
+on = "tab.moved"
+command = ["sh", "tab-title.sh"]
+
+# The sidebar's number depends on how many agents a space has.
+[[events]]
+on = "pane.agent_detected"
+command = ["sh", "tab-title.sh"]
+
+[[events]]
+on = "pane.closed"
+command = ["sh", "tab-title.sh"]
+
+[[events]]
+on = "pane.moved"
+command = ["sh", "tab-title.sh"]
+
+# herdr doesn't pass title changes to plugins, so Claude Code's own hooks run
+# the script when a session gets its name.

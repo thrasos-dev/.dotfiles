@@ -10,7 +10,7 @@ Each directory represents a "package" that can be independently managed:
 - `nvim/` - Neovim configuration 
 - `ghostty/` - Ghostty terminal configuration
 - `claude/` - Claude Code global config (`~/.claude/CLAUDE.md` and `settings.json`)
-- `herdr/` - Herdr config (`~/.config/herdr/config.toml`)
+- `herdr/` - Herdr config (`~/.config/herdr/config.toml`) and the tab-title plugin
 
 ## Setup
 
@@ -23,6 +23,9 @@ stow vim nvim ghostty
 
 # The claude and herdr packages must be stowed with --no-folding (see note at the bottom)
 stow --no-folding claude herdr
+
+# Herdr loads the tab-title plugin once it is linked
+herdr plugin link ~/.config/herdr/plugins/tab-title
 
 # Or install individual packages
 stow vim
@@ -50,7 +53,7 @@ stow -R package_name
 
 > **Note:** The `claude/` package targets `~/.claude`, which Claude Code actively writes to (sessions, history, projects, caches). Always stow it with `--no-folding` so only the individual config files are symlinked and `~/.claude` stays a real directory — otherwise, on a machine where `~/.claude` doesn't exist yet, Stow would symlink the entire directory into this repo and Claude would write all its state there.
 
-> **Note:** The same applies to `herdr/`: `~/.config/herdr` also holds Herdr's sockets, logs and session state, so stow it with `--no-folding` to link only `config.toml`.
+> **Note:** The same applies to `herdr/`: `~/.config/herdr` also holds Herdr's sockets, logs and session state, so stow it with `--no-folding` to link only the files in this package.
 
 ## Claude settings drift
 

@@ -82,8 +82,6 @@
 !claude/.claude/
 !claude/.claude/CLAUDE.md
 !claude/.claude/settings.json
-!claude/.claude/hooks/
-!claude/.claude/hooks/herdr-tab-title.sh
 
 # Herdr package
 !herdr/
@@ -91,6 +89,10 @@
 !herdr/.config/herdr/
 !herdr/.config/herdr/config.toml
 !herdr/.config/herdr/new-claude-tab.sh
+!herdr/.config/herdr/plugins/
+!herdr/.config/herdr/plugins/tab-title/
+!herdr/.config/herdr/plugins/tab-title/herdr-plugin.toml
+!herdr/.config/herdr/plugins/tab-title/tab-title.sh
 
 # Ignore .DS_Store files everywhere
 **/.DS_Store

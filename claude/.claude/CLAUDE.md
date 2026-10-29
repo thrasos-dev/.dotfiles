@@ -11,7 +11,5 @@ Personal, cross-project preferences. These apply in every project unless a proje
 
 ## My skills
 
-- **web-conventions** (personal skill) — my conventions and taste for web UI. Use it when
-  building, styling, or modifying any frontend/web interface.
 - **frontend-design** — use it when designing UI: building pages, layouts, or
   reshaping an existing interface.

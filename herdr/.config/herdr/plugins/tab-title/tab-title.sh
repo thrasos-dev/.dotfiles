@@ -75,7 +75,10 @@ for workspace in $(printf '%s' "$panes" | jq -r '
       named_tab=$tab
       named_label=$label
 
-      [ "$agents" -gt 1 ] || label=${label#"$number · "}
+      # With other agents in the space, every entry shows its number, even
+      # before its session has a name.
+      label=${label#"$number · "}
+      [ "$agents" -gt 1 ] && label="$number${label:+ · $label}"
       [ "$label" = "$shown" ] ||
         "$herdr" pane report-metadata "$pane" --source user:herdr-tab-title \
           --token "tab_name=$label" >/dev/null 2>&1

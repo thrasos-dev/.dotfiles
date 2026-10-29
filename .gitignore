@@ -83,6 +83,12 @@
 !claude/.claude/CLAUDE.md
 !claude/.claude/settings.json
 
+# Herdr package
+!herdr/
+!herdr/.config/
+!herdr/.config/herdr/
+!herdr/.config/herdr/config.toml
+
 # Ignore .DS_Store files everywhere
 **/.DS_Store
 .DS_Store

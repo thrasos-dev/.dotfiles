@@ -1,0 +1,21 @@
+onboarding = false
+
+[ui.sound]
+enabled = true
+
+[ui]
+status_indicators = "dots"
+
+[ui.toast]
+delivery = "terminal"
+
+[theme]
+auto_switch = true
+dark_name = "catppuccin"
+light_name = "catppuccin-latte"
+
+[ui.sidebar.agents.rows_by_agent]
+claude = [
+  ["state_icon", "workspace", "tab"],
+  ["terminal_title_stripped"],
+]
